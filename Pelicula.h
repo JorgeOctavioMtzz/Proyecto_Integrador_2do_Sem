@@ -31,9 +31,10 @@ Pelicula :: Pelicula(string tit, string gen, int id, int dur, int cal) : Video(t
 void Pelicula::muestra(){
     cout << "Titulo: " << titulo << endl;
     cout << "Genero: " << genero << endl;
+    cout << "Duración : " << duracion << " min"<< endl;
+    cout << "Calificación: " << calificacion  <<  " Estrellas"<< endl;
     cout << "Ïd de Película: "<< idVideo << endl;
-    cout << "Duración : " << duracion << endl;
-    cout << "Calificación: " << calificacion * '*' << endl;
+    cout << endl;
 
 }
 

@@ -14,8 +14,9 @@ class Usuario{
 
     public:
         Usuario();
+        Usuario(string nm,string acc, int cntVid);
         int getUnIdMisVideos(int indice);
-        int operator+(int id);
+        void operator+(int id);
         void setaccount(string acc) { account = acc;};
         string getaccount(){ return account;};
         void setname(string nm) { name = nm;};
@@ -24,10 +25,12 @@ class Usuario{
 };
 
 Usuario::Usuario(){
-    name = "default";
-    account = "default";
-    contadorVideos = 0;
-    for(int i = 0; i < 20; i++){ misVideos[i] = 0; }
+    name = "N/A";
+    account = "N/A";
+    contadorVideos = 20;
+    for(int i = 0; i <contadorVideos; i++){ 
+        misVideos[i] = 0; 
+    }
 }
 
 int Usuario::getUnIdMisVideos(int indice){
@@ -38,7 +41,7 @@ int Usuario::getUnIdMisVideos(int indice){
     }
 }
 
-int Usuario::operator+(int id){
+void Usuario::operator+(int id){
     bool verificacion = false;
     for(int i = 0; i < 20; i++){
         if (misVideos[i] == id || contadorVideos >= 20)

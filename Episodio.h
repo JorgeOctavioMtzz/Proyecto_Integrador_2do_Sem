@@ -34,8 +34,13 @@ Episodio :: Episodio(string tit, string gen, string ser, int numEp, int numTemp,
     numeroTemporada=numTemp;
 }
 void Episodio::muestra(){
-    cout << "Temporada " << numeroTemporada << "Episodio " << numeroEpisodio << endl;
-
+    cout << "Titulo: " << titulo << endl;
+    cout << "| Temporada " << numeroTemporada << " | Episodio " << numeroEpisodio << " |"<< endl;
+    cout << "Genero: " << genero << endl;
+    cout << "Duración : " << duracion << " min"<< endl;
+    cout << "Ïd de Episodio: "<< idVideo << endl;
+    cout << "Calificación: " << calificacion << " Estrellas" << endl;
+    cout << endl;
 }
 
 #endif /* Episodio_h */
