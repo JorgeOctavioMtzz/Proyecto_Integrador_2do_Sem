@@ -119,12 +119,16 @@ int main(){
             }
 
             case 'f':  {
+                bool uwu=false;
+                while(uwu==false){
                 cin >> idint;
-                for (int i=0;i<contV;i++){
-                    if(arrVideos[i]->getIdVideo()==idint){
-                        
-                    }
-                }                 
+                    for (int i=0;i<contV;i++){
+                        if(arrVideos[i]->getIdVideo()==idint){
+                            user1 += idint;
+                            uwu = true;
+                        }
+                    }   
+                }              
                 break;
             }
         }
